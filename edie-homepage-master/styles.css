@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.main-div {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 50px;
+    height: 80px;
+}
+
+.navbar h1 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.navbar .nav-links {
+    padding-top: 7px;
+    position: absolute;
+    right: 50px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.nav-links ul li::after {
+    left: 0;
+    bottom: -10px;
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #333333;
+    position: absolute;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.toggle{
+    position: absolute;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.toggle-active{
+    opacity: 1;
+}
+
+.icon-toggle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 16px;
+    color: black;
+}
+
+.icon-toggle-close{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 16px;
+    color: black;
+    opacity: 0;
+}
+
+/*HERO CONTAINER*/
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 50px;
+}
+
+.hero-container h3 {
+    padding-left: 20%;
+    padding-bottom: 10px;
+    color: #2d9cdb;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.hero-container h1,
+.contact-sec h1 {
+    width: 80%;
+    padding-left: 20%;
+    padding-bottom: 10px;
+    color: #333333;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.hero-container img {
+    border-radius: 18px;
+}
+
+/*CONTACT SECTION*/
+
+.contact-sec h1 {
+    width: 50%;
+}
+
+.contact-sec p {
+    padding-left: 20%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+    color: #4f4f4f;
+    font-size: 18px;
+    font-family: 400;
+}
+
+.contact-sec h4 {
+    padding-left: 20%;
+    width: 50%;
+    color: #828282;
+    font-size: 14px;
+    font-family: 500;
+}
+
+.contact-us-input {
+    border-radius: 12px;
+    background: #f2f2f2;
+    padding-left: 12px;
+    margin-left: 20%;
+    width: 30%;
+    height: 60px;
+}
+
+.contact-us-input input[type="email"] {
+    height: 100%;
+    outline: none;
+    border: 0px none;
+    background: #f2f2f2;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #bdbdbd;
+}
+
+.contact-us-input button {
+    float: right;
+    width: 90px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: white;
+    background-color: #2d9cdb;
+    border-radius: 12px;
+    border: 1px solid transparent;
+}
+
+/*SERVICES*/
+
+.services-sec {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-sec h1 {
+    padding-left: 10%;
+    width: 50%;
+    font-weight: 500;
+    font-size: 36px;
+    color: #333333;
+}
+
+.services-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    justify-content: center;
+}
+
+.uiux,
+.front-end,
+.back-end {
+    flex-direction: column;
+    justify-content: center;
+    padding: 35px 35px;
+    width: 30%;
+    min-width: 300px;
+    padding-bottom: 40px;
+}
+
+.uiux .icon {
+    position: relative;
+    width: 67px;
+    height: 67px;
+    background: #2D9CDB;
+    border-radius: 16px;
+    color: white;
+}
+
+i {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.front-end .icon {
+    position: relative;
+    width: 67px;
+    height: 67px;
+    background: #27AE60;
+    border-radius: 16px;
+    color: white;
+}
+
+.back-end .icon {
+    position: relative;
+    width: 67px;
+    height: 67px;
+    background: #EB5757;
+    border-radius: 16px;
+    color: white;
+}
+
+.uiux h2,
+.front-end h2,
+.back-end h2 {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    color: #333333;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.uiux p,
+.front-end p,
+.back-end p {
+    font-size: 16px;
+    color: #4F4F4F;
+    padding-bottom: 25px;
+}
+
+.inactive {
+    font-family: 'Poppins', sans-serif;
+    width: 120px;
+    height: 45px;
+    background: #E0E0E0;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 16px;
+    color: #828282;
+}
+
+.front-end:hover,
+.uiux:hover,
+.back-end:hover {
+    box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.front-end:hover button,
+.back-end:hover button,
+.uiux:hover button {
+    font-family: 'Poppins', sans-serif;
+    width: 120px;
+    height: 45px;
+    background: #2D9CDB;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+
+/*Works section*/
+.works-sec {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.works-sec h1 {
+    padding-left: 10%;
+    width: 40%;
+    font-weight: 500;
+    font-size: 36px;
+    color: #333333;
+}
+
+.works-flx {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 400px;
+    justify-content: center;
+    width: 80%;
+}
+
+.fullstackapp,
+.uiuxapp,
+.bookingapp,
+.juiceprodapp {
+    width: 50%;
+    padding-right: 10px;
+    min-width: 300px;
+}
+
+.fullstackapp h4,
+.uiuxapp h4,
+.bookingapp h4,
+.juiceprodapp h4 {
+    padding-top: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #828282;
+}
+
+.fullstackapp h2,
+.uiuxapp h2,
+.bookingapp h2,
+.juiceprodapp h2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #333333;
+}
+
+.fullstackapp,
+.bookingapp {
+    margin-top: 130px;
+}
+
+.fullstackapp img,
+.bookingapp img,
+.uiuxapp img,
+.juiceprodapp img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.seemore h3 {
+    width: 150px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #2D9CDB;
+    padding: 0 10px;
+}
+
+.seemore i {
+    background-color: white;
+    color: #2D9CDB;
+    width: 32px;
+    height: 32px;
+}
+
+.seemore > div{
+    position: relative;
+}
+
+.seemore {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 0;
+}
+
+
+/*TEAMS*/
+.team {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.team-desc {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-desc h3 {
+    padding-top: 10px;
+    font-size: 18px;
+    color: #EB5757;
+}
+
+.team-desc h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    font-weight: 500;
+    font-size: 36px;
+    color: #333333;
+}
+
+.team-desc h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4F4F4F;
+}
+
+.team-pic {
+    padding-right: 10%;
+    width: 70%;
+    min-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 200px;
+}
+
+.team-pic div>img {
+    margin: 20px 20px;
+    border-radius: 24px;
+    min-width: 200px;
+}
+
+
+/*CLIENTS*/
+.clients-sec {
+    margin-top: 200px;
+    padding-left: 10%;
+}
+
+.clients-sec h1 {
+    font-weight: 500;
+    font-size: 36px;
+    color: #333333;
+}
+
+.cust-det {
+    padding-top: 30px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.cust-det img {
+    width: 82px;
+    height: 82px;
+    border-radius: 12px;
+}
+
+.cust-det-name {
+    padding-left: 20px;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.cust-det-name h3 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #333333;
+}
+
+.cust-det-name h4 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #828282;
+}
+
+/*Footer*/
+
+.footer-div{
+    margin-top: 200px;
+    background: #100E1D;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.footer-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.list-menu{
+    width: 30%;
+}
+
+.list-menu ul li {
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.list-menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.list-menu ul li::after {
+    left: 0;
+    bottom: -6px;
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: white;
+    position: absolute;
+}
+
+.list-menu ul li:hover::after {
+    width: 20%;
+    transition: 0.3s;
+}
+
+.social-media{
+    width: 20%;
+}
+
+.social-media h1 {
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.links> img{
+    padding: 0px 5px 0 0;
+    cursor: pointer;
+}
+
+.contact-us-1{
+    width: 50%;
+}
+
+.contact-us-email{
+    width: 400px;
+    border-radius: 12px;
+    background: #f2f2f2;
+    padding-left: 12px;
+    margin-left: 20%;
+    height: 60px;
+}
+
+.contact-us-email input[type="email"] {
+    height: 100%;
+    width: 285px;
+    outline: none;
+    border: 0px none;
+    background: #f2f2f2;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #bdbdbd;
+}
+
+.contact-us-email button {
+    font-family: 'Poppins', sans-serif;
+    float: top;
+    width: 90px;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: white;
+    background-color: #2d9cdb;
+    border-radius: 12px;
+    border: 1px solid transparent;
+}
+
+.creator p{
+    padding-top: 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+@media(max-width: 800px){
+    .nav-links{
+        opacity: 0;
+    }
+    .toggle{
+        opacity: 1;
+    }
+    .hero-container h3, .contact-sec p{
+        font-size: 12px;
+    }
+    .hero-container h1, .contact-sec h1, .services-sec h1, .works-sec h1, .team-desc h1, .clients-sec h1{
+        font-size: 24px;
+        width: 70%;
+    }
+    .contact-sec h4{
+        font-size: 10px;
+    }
+    .contact-us-input{
+        width: 45%;
+    }
+    .contact-us-input input[type=email]{
+        font-size: 14px;
+        min-width: 200px;
+    }
+    .seemore{
+        justify-content: flex-start;
+    }
+    .team{
+        margin-top: 20px;
+        width: 80%;
+        overflow: hidden;
+    }
+    .team-desc, .team-pic{
+        width: 80%;
+    }
+    .male, .female{
+        width: 50%;
+    }
+    .male>img, .female>img {
+        width: 80%;
+    }
+    .female>img{
+        height: 70%;
+    }
+    .clients-sec, .footer-div, .works-sec, .cust-det{
+        margin-top: 20px;
+    }
+    .fullstackapp, .bookingapp{
+        margin-top: 10px;
+    }
+    .cust-det{
+        padding-top: 0;
+    }
+    .footer-data{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .social-media, .contact-us-1{
+        margin-top: 20px;
+    }
+    .social-media{
+        padding-left: 20px;
+        width: 50%;
+    }
+    .contact-us-1{
+        width: 80%;
+    }
+    .contact-us-email{
+        margin-left: 20px;
+        min-width: 200px;
+    }
+    .creator p{
+        margin-top: 50px;
+    }
+    .services-sec{
+        justify-content: flex-start;
+        width: 80%;
+    }
+}
+
+@media(max-width: 599px){
+    .uiux, .back-end, .front-end{
+        width: 80%;
+    }
+    .team-pic div>img {
+        width: 250px;
+    }
+    .team-pic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-20%);
+    }
+    .female{
+        align-self: center;
+    }
+    .male{
+        align-self: center;
+    }
+}
